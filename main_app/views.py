@@ -5,7 +5,7 @@ from .forms import SearchForm
 
 def main_app(request):
     categories = Category.objects.all()
-    return render(request, 'main.html', {'category': categories})
+    return render(request, 'index.html', {'category': categories})
 
 
 def shop(request):
