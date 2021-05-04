@@ -1,0 +1,17 @@
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<h1 style="margin: 80px 250px 50px 250px;">You have been successfully registered!</h1>
+<form style="margin: 150px 150px 150px 150px;" method="POST">
+    {% csrf_token %}
+     <fields class="from-group">
+        {{ form|crispy }}
+      </fields>
+        <button type="submit">Sign in</button>
+
+</form>
+
+
+
+{% endblock content %}

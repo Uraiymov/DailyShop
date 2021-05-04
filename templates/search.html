@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div style=" margin-left: 450px">
+    <h1 style="margin-top: 150px;">Search</h1>
+    <form method="POST">
+         {{ form.as_p }}
+    </form>
+        <botton type="submit">Search</botton>
+</div>
+
+{% if results %}
+{{ results }}
+{% for results in results %}
+{{ result.name }}
+{{ result.price }}
+{% endfor %}
+{% endif %}
+
+{% endblock content %}
